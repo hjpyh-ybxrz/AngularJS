@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--ng-app:（AngularJS的指令，固定的，不能改名字）
+自定义的属性，这个属性告诉AngularJS，
+我们的application，要用Angular来处理，并且将含有
+ng-app这个属性的标签，作为我整个Angular app的根元素--->
+<html ng-app="hello">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular hello world</title>
+  </head>
+  <body ng-controller="ControllerName">
+    <ul>
+      <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.desc}}</p>
+      </li>
+    </ul>
+    <script src="vendor/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!--
+  模板变量和module数据绑定：
+    1.声明一个ng-app，并为这个app指定一个名字
+    2.声明一个ng-controller并为这个ng-controller指定一个名字
+    3.写页面展示所要用的模板，在这个模板中有：
+      a）数据绑定
+      b）循环指令ng-repeat
+
+    4.JS中定义一个模块，并且将这个模块的名字，指定为ng-app所指定的名字
+    5.Js中，在模块上定义一个controller，controller实际是一个构造函数，
+      名字开头要大写，controller接收两个参数。第一个参数，是controller的名字
+      这个名字跟模板中ng-controller制定的名字相同。回调函数有一个参数，这个参数
+      $scope（固定，不能改），就将模板上的变量和module里的数据绑定到了一起，并进行
+      wathch。当module的数据改变，view的数据也会对应变化。
+---->
