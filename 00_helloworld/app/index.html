@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--ng-app:（AngularJS的指令，固定的，不能改名字）
+自定义的属性，这个属性告诉AngularJS，
+我们的application，要用Angular来处理，并且将含有
+ng-app这个属性的标签，作为我整个Angular app的根元素--->
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular hello world</title>
+  </head>
+  <body>
+    <!--双大括号：是一个AngularJS的表达式。
+    表达式会将页面（view）上面的显示，与数据（model）进行绑定
+    Angular看到表达式之后，会将表达式里面的js代码执行，
+    并且将表达式，用执行结果替换
+    --->
+    <h1>Hello {{'world! ' + 'I am going play Angular'}}</h1>
+    <script src="vendor/angular.min.js">
+
+    </script>
+  </body>
+</html>
